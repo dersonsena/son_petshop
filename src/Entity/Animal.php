@@ -48,7 +48,7 @@ class Animal
     /**
      * @return string
      */
-    public function getNome(): string
+    public function getNome(): ?string
     {
         return $this->nome;
     }
@@ -66,7 +66,7 @@ class Animal
     /**
      * @return string
      */
-    public function getDataNascimento(): string
+    public function getDataNascimento()
     {
         return $this->data_nascimento;
     }
@@ -75,7 +75,7 @@ class Animal
      * @param string $data_nascimento
      * @return Animal
      */
-    public function setDataNascimento(string $data_nascimento): Animal
+    public function setDataNascimento($data_nascimento): Animal
     {
         $this->data_nascimento = $data_nascimento;
         return $this;

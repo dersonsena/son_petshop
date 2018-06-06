@@ -38,6 +38,20 @@
                 <th>Bairro</th>
                 <td>{{ cliente.endereco.bairro }}</td>
             </tr>
+            <tr>
+                <th colspan="2" class="text-center"><h3>Animais</h3></th>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                    {% for animal in cliente.animal %}
+                        <li><a href="{{ path('animais_view', {id: animal.id}) }}">{{ animal.nome }}</a></li>
+                    {% else %}
+                        <li>Nenhum animal para este cliente.</li>
+                    {% endfor %}
+                    </ul>
+                </td>
+            </tr>
         </tbody>
     </table>
 

@@ -8,7 +8,7 @@
 
     <div class="row">
         <div class="col-md-12 form-group">
-            <a href="" class="btn btn-primary pull-right">Novo Animal</a>
+            <a href="{{ path('animais_create') }}" class="btn btn-primary pull-right">Novo Animal</a>
         </div>
     </div>
 
@@ -30,7 +30,7 @@
                         {{ animal.nome }}
                     </a>
                 </td>
-                <td>{{ animal.dataNascimento }}</td>
+                <td>{{ animal.dataNascimento|date('d/m/Y') }}</td>
                 <td>
 
                 </td>

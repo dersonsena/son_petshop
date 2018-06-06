@@ -30,7 +30,7 @@ class Cliente
 
     /**
      * @var object
-     * @ORM\ManyToOne(targetEntity="App\Entity\Endereco", inversedBy="id")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Endereco", inversedBy="id", cascade={"persist"})
      */
     private $endereco;
 
@@ -55,7 +55,7 @@ class Cliente
     /**
      * @return string
      */
-    public function getNome(): string
+    public function getNome()
     {
         return $this->nome;
     }
@@ -73,7 +73,7 @@ class Cliente
     /**
      * @return string
      */
-    public function getTelefone(): string
+    public function getTelefone()
     {
         return $this->telefone;
     }
@@ -91,7 +91,7 @@ class Cliente
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail()
     {
         return $this->email;
     }
@@ -115,10 +115,10 @@ class Cliente
     }
 
     /**
-     * @param object $endereco
+     * @param Endereco $endereco
      * @return Cliente
      */
-    public function setEndereco($endereco): Cliente
+    public function setEndereco(Endereco $endereco): Cliente
     {
         $this->endereco = $endereco;
         return $this;

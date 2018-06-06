@@ -42,7 +42,7 @@ class Endereco
     /**
      * @return string
      */
-    public function getRua(): string
+    public function getRua()
     {
         return $this->rua;
     }
@@ -60,7 +60,7 @@ class Endereco
     /**
      * @return string
      */
-    public function getNumero(): string
+    public function getNumero()
     {
         return $this->numero;
     }
@@ -78,7 +78,7 @@ class Endereco
     /**
      * @return string
      */
-    public function getBairro(): string
+    public function getBairro()
     {
         return $this->bairro;
     }

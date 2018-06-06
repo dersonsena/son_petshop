@@ -39,6 +39,17 @@
 </nav>
 
 <main role="main" class="container">
+    {% for flashMessage in app.session.flashbag.get('success') %}
+        <div class="alert alert-success">{{ flashMessage }}</div>
+    {% endfor %}
+
+    {% for flashMessage in app.session.flashbag.get('warning') %}
+        <div class="alert alert-warning">{{ flashMessage }}</div>
+    {% endfor %}
+
+    {% for flashMessage in app.session.flashbag.get('error') %}
+        <div class="alert alert-error">{{ flashMessage }}</div>
+    {% endfor %}
 {% block body %}{% endblock %}
 </main><!-- /.container -->
 
