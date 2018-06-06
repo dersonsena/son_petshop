@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Visualização de Clientes{% endblock %}
+
+{% block body %}
+    <h1>Visualizando Cliente <small>{{ cliente.nome }}</small></h1>
+    <hr />
+
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th colspan="2" class="text-center"><h3>Dados do Cliente</h3></th>
+            </tr>
+            <tr>
+                <th>ID</th>
+                <td>{{ cliente.id }}</td>
+            </tr>
+            <tr>
+                <th>Nome</th>
+                <td>{{ cliente.nome }}</td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td>{{ cliente.email }}</td>
+            </tr>
+            <tr>
+                <th>Telefone</th>
+                <td>{{ cliente.telefone }}</td>
+            </tr>
+            <tr>
+                <th colspan="2" class="text-center"><h3>Endereço</h3></th>
+            </tr>
+            <tr>
+                <th>Logradouro</th>
+                <td>{{ cliente.endereco.rua }}, nº {{ cliente.endereco.numero }}</td>
+            </tr>
+            <tr>
+                <th>Bairro</th>
+                <td>{{ cliente.endereco.bairro }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
